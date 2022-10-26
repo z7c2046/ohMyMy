@@ -377,9 +377,9 @@ a:visited {
         /* text-align: center; */
         justify-items: center;
     }
-.about .contentBox{
-    height:30vh;
-}
+    .about .contentBox{
+        height:20vh;
+    }
     .about .livePhotosBox {
         opacity: .9;
         height: 50vh;
