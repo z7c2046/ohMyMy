@@ -1,0 +1,418 @@
+@font-face {
+    font-family: pingFang;
+    src: url("/resource/fonts/pingFang.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: pingFang;
+}
+
+body {
+    background-color: #111;
+    color: white;
+}
+
+section {
+    position: relative;
+    padding: 100px;
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    /* 下划线 */
+}
+
+a:link,
+a:visited {
+    color: white;
+}
+
+.header {
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.header .menu {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.banner1 {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.banner1 .content {
+    position: relative;
+    z-index: 9;
+    display: grid;
+    grid-template-rows: 12vh 10vh 13vh 13vh 13vh 7vh;
+    align-items: center;
+    justify-items: start;
+}
+
+.banner1 .content h1 {
+    font-size: 5em;
+}
+
+.banner1 .content p:nth-child(2) {
+    font-size: 3em;
+}
+
+.banner1 .content p {
+    line-height: 1.2em;
+    font-size: 1.2em;
+    text-align: center;
+    width: 600px;
+    text-align: left;
+}
+
+.banner1 .content p span {
+    font-weight: bolder;
+}
+
+.banner1 .content .button1 {
+    padding: 10px 30px;
+    background: #fff;
+    color: #333;
+}
+
+.banner1 .backgroundImg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+.banner1 .backgroundImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.banner1 .backgroundImg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.banner1 .backgroundImg::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to top, #111, transparent);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    column-gap: 40px;
+}
+
+.about .contentBox {
+    text-align: end;
+    display: grid;
+    width: 80%;
+    height: 80%;
+    /* flex-direction: column; */
+    justify-items: end;
+    align-content: center;
+}
+
+.about .livePhotosBox{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.about .contentBox h2 {
+    padding: 10px 0px;
+}
+
+.about .contentBox p {
+    padding: 10px 0px;
+}
+
+.about .contentBox a {
+    padding: 10px 20px;
+    background: #fff;
+    color: #333;
+}
+
+.about .imgBox img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.banner2,
+.banner3 {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.banner2 img,
+.banner3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: .85;
+}
+
+.banner2::before,
+.banner3::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to top, #111, transparent);
+}
+
+.banner2::after,
+.banner3::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to bottom, #111, transparent);
+}
+
+/* =========================================== */
+.destination {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.destination .content {
+    width: 100%;
+}
+
+:root {
+    --allHeight: 70vh;
+}
+
+.destination .destinationList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.destination a {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #333;
+}
+
+.destination .destinationList .stripBox {
+    background: #191919;
+    height: var(--allHeight);
+    transition: .5s;
+    margin: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* 当外层容器被触摸时，内层stripBox */
+.destination .destinationList:hover .stripBox {
+    opacity: .2;
+}
+
+/* 当内层stripBox被触摸时 */
+/* 这两个语句联合在一起就组成了js才能实现的当。。。触发。。。效果 */
+.destination .destinationList .stripBox:hover {
+    opacity: 1;
+}
+
+.destination .destinationList .stripBox .destinationImgBox {
+    width: 100%;
+    height: 400px;
+}
+
+.destination .destinationList .stripBox .destinationImgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destination .destinationList .stripBox .destinationContent {
+    width: 100%;
+    display: grid;
+    align-items: center;
+}
+
+.destination .destinationList .stripBox .destinationContent h2 {
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.2em;
+}
+
+.destination .destinationList .stripBox .destinationContent h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.footer {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer .link {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.footer .link li {
+    list-style: none;
+}
+
+.footer .link li a {
+    margin: 0 20px;
+}
+
+.footer .link li img {
+    width: 40px;
+    height: 40px;
+    filter: invert(1)
+}
+
+.copyrightText {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+}
+
+.copyrightText a {
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    section {
+        padding: 40px;
+    }
+
+    .banner1 .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .banner1 .content h1 {
+        font-size: 4em;
+        line-height: 1;
+    }
+    .banner1 .content p:nth-child(2){
+    font-size:2.5em;
+    margin:10px 0px;
+    }
+    .banner1 .content p {
+        font-size: 1em;
+        width: 100%;
+        margin-bottom:10px;
+    }
+    .banner1 .content a{
+/*         margin-top:30px; */
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about .contentBox,
+    .about .livePhotosBox {
+        width: 100%;
+        /* text-align: center; */
+        justify-items: center;
+    }
+.about .contentBox{
+    height:30vh;
+}
+    .about .livePhotosBox {
+        opacity: .9;
+        height: 50vh;
+    }
+
+    .destination {
+        text-align: center;
+        height: 300vh;
+    }
+
+    .destination .destinationList {
+        margin: 20px 0px;
+        width: 100%;
+        height: 220vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .destination .destinationList .stripBox {
+        width: 350px;
+        height: 70vh;
+        background: #191919;
+        transition: 0.5s;
+        margin: 0;
+    }
+
+    .destination .destinationList .stripBox .imgBox {
+        height: 300px;
+    }
+
+    .destination a {
+        margin-top: 20px;
+    }
+}
