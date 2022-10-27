@@ -9,6 +9,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: pingFang;
+    user-select: none;
 }
 
 body {
