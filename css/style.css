@@ -16,19 +16,35 @@ body {
     background-color: #111;
     color: white;
 }
-body::-webkit-scrollbar {
+
+
+
+/*     ***************************** */
+.main {
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      scroll-snap-type: y mandatory;
+    }
+.main::-webkit-scrollbar {
       width: 0;
     }
+
+
+
 section {
     position: relative;
     padding: 100px;
     width: 100%;
     height: 100vh;
+    
+/*     ***************************** */
+    scroll-snap-align: start;
 }
 
 a {
     text-decoration: none;
-    /* 下划线 */
+    /* ä¸‹åˆ’çº¿ */
 }
 
 a:link,
@@ -209,6 +225,7 @@ a:visited {
 .destination {
     text-align: center;
     padding-top: 50px;
+
 }
 
 .destination .content {
@@ -226,6 +243,8 @@ a:visited {
     width: 100%;
     height: 74vh;
     column-gap: 10px;
+
+
 }
 
 .destination a {
@@ -243,13 +262,13 @@ a:visited {
     grid-template-rows: 1fr 1fr;
 }
 
-/* 当外层容器被触摸时，内层stripBox */
+/* å½“å¤–å±‚å®¹å™¨è¢«è§¦æ‘¸æ—¶ï¼Œå†…å±‚stripBox */
 .destination .destinationList:hover .stripBox {
     opacity: .2;
 }
 
-/* 当内层stripBox被触摸时 */
-/* 这两个语句联合在一起就组成了js才能实现的当。。。触发。。。效果 */
+/* å½“å†…å±‚stripBoxè¢«è§¦æ‘¸æ—¶ */
+/* è¿™ä¸¤ä¸ªè¯­å¥è”åˆåœ¨ä¸€èµ·å°±ç»„æˆäº†jsæ‰èƒ½å®žçŽ°çš„å½“ã€‚ã€‚ã€‚è§¦å‘ã€‚ã€‚ã€‚æ•ˆæžœ */
 .destination .destinationList .stripBox:hover {
     opacity: 1;
 }
@@ -325,7 +344,22 @@ a:visited {
 }
 
 @media (max-width: 900px) {
+
+
+/*     ***************************** */
+.main {
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      scroll-snap-type: y mandatory;
+    }
+    .main::-webkit-scrollbar {
+      width: 0;
+    }
+
     section {
+        /*     ***************************** */
+    scroll-snap-align: start;
         padding: 20px 40px 60px;
     }
 
@@ -382,6 +416,9 @@ a:visited {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+/* ***************************** */
+    scroll-snap-type: y mandatory;
+       
     }
 
     .destination .destinationList .stripBox {
@@ -390,6 +427,8 @@ a:visited {
         background: #191919;
         transition: 0.5s;
         margin: 0px 10px;
+         /*     ***************************** */
+    scroll-snap-align: start;
     }
 
     .destination .destinationList .stripBox .imgBox {
@@ -398,5 +437,8 @@ a:visited {
 
     .destination a {
         margin-top: 20px;
+    }
+    .banner3{
+        height:90vh;
     }
 }
