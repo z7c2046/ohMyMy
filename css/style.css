@@ -8,7 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: SimHei;
+    font-family: PingFangSC-Regular, sans-serif;
     user-select: none;
 }
 
