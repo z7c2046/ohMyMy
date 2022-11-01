@@ -13,22 +13,6 @@ body {
     color: white;
 }
 
-
-
-/*     ***************************** */
-.main {
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    scroll-snap-type: y mandatory;
-}
-
-.main::-webkit-scrollbar {
-    width: 0;
-}
-
-
-
 section {
     position: relative;
     padding: 100px;
