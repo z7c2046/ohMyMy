@@ -46,8 +46,8 @@
                 <p>触摸实况图片以查看生活照</p>
                 <a href="#destination">GO ON</a>
             </div>
-            <div class="livePhotosBox" data-live-photo data-photo-src="resource/livePhotos/life.jpg"
-                data-video-src="resource/livePhotos/life.mov">
+            <div class="livePhotosBox" data-live-photo data-photo-src="resource/livePhotos/IMG_1333.jpg"
+                data-video-src="resource/livePhotos/IMG_1333.MOV">
             </div>
         </section>
         <section class="banner2">
@@ -132,8 +132,8 @@
 
         // Create the player using a pre-existing DOM element.
         const player = LivePhotosKit.Player(document.getElementById('my-live-photo-target-element'));
-        player.photoSrc = "resource/livePhotos/life.jpg";
-        player.videoSrc = "resource/livePhotos/life.mp4";
+        player.photoSrc = "resource/livePhotos/IMG_1333.jpg";
+        player.videoSrc = "resource/livePhotos/IMG_1333.MOV";
         // Listen to events the player emits.
         player.addEventListener('canplay', evt => console.log('player ready', evt));
         player.addEventListener('error', evt => console.log('player load error', evt));
